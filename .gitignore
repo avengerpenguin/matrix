@@ -1,0 +1,4 @@
+venv
+.direnv
+.terraform
+.terraform.lock.hcl

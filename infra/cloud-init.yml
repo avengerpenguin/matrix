@@ -1,0 +1,6 @@
+allow_public_ssh_keys: true
+disable_root: true
+disable_root_opts: no-port-forwarding,no-agent-forwarding,no-X11-forwarding
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCY/V0WDmhe4MSDX2+5/vmyJy5fzWKdE3aejbl62/n7sK8wbzoGk7jfxPc0knKCvNUKBngepBen5C3/pZuR7Il7XCdXQzTIUDD+HAZKTvMbmcwwd3Vcm3Hhny+UxDKUN9rdlzE3Hy/VnPOjC256M3NxyZ465TsqhLSwdTEpKcyghWNzlw/nOTTpVMNuu/KvYsL1UZUAkkv+JrHx96ZqnlpukNM6Ou6srbm/w26IegvrP4R6AKOioKmLm9BtLqiLWJxp0TiyfkuATenW8K7He6eqzz61i41qZc+lJuRadmWuQYEQqmmAf5NjNyKOMmgCzSzMVrrXusZkJmJPCQ7Tp+1gep06/ck+n8C0crsrFrTPAiSZWMCH0oV+/W6c8pLH0Xehy/YLgoGgefFTNihz04EvSbhH10nE3rzm11agm5OUNrim1C+6+9n25hJzhMJncISmg/zqfissRN5y/n9JNdQFCnxvPe73RTwCgscKhfztnJm/C7LMe/s1+HaUVHK5xmE= ross@jura
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmEKLspr0w3JJaTHJCXdh2rY/mZwcTYUHJSaxTx18Bw rossfenning@Rosss-MacBook-Pro.local
