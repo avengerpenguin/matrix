@@ -13,3 +13,7 @@ jobs:
       - name: OpenTofu Init
         id: init
         run: tofu -chdir=infra init
+
+      - name: OpenTofu Plan
+        id: plan
+        run: tofu -chdir=infra plan -no-color
