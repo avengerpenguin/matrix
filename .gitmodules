@@ -1,3 +1,4 @@
 [submodule "matrix-docker-ansible-deploy"]
 	path = matrix-docker-ansible-deploy
-	url = git@github.com:spantaleev/matrix-docker-ansible-deploy.git@222f8772613ac03d05366dc674116223c26dbeac
+	url = git@github.com:spantaleev/matrix-docker-ansible-deploy.git
+	
