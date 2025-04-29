@@ -2,3 +2,5 @@ venv
 .direnv
 .terraform
 .terraform.lock.hcl
+vars.yml
+.idea
