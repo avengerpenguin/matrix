@@ -27,8 +27,8 @@ resource "scaleway_instance_ip" "v6" {
 }
 
 resource "scaleway_instance_server" "this" {
-  type  = "DEV1-S"
-  image = "debian_bookworm"
+  type   = "DEV1-S"
+  image  = "debian_bookworm"
   ip_ids = [scaleway_instance_ip.v4.id, scaleway_instance_ip.v6.id]
   root_volume {
     delete_on_termination = false
