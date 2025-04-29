@@ -8,7 +8,6 @@ terraform {
   backend "s3" {
     bucket                      = "rf-tofu-state"
     key                         = "matrix.tfstate"
-    profile                     = "scaleway"
     region                      = "nl-ams"
     endpoint                    = "https://s3.nl-ams.scw.cloud"
     skip_credentials_validation = true
