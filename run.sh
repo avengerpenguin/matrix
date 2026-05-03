@@ -12,9 +12,12 @@ tofu apply
 
 cd "$ROOT_DIR"
 
-ln -sfn "$ROOT_DIR/inventory" matrix-docker-ansible-deploy/inventory
+ln -sfn "../inventory" matrix-docker-ansible-deploy/inventory
 
-cd matrix-docker-ansible-deploy
-just update
-ansible-playbook -i inventory/hosts setup.yml --tags=install-all,ensure-matrix-users-created,start
-#ansible-playbook -i inventory/hosts setup.yml --extra-vars='username=avengerpenguin password=aeYHhaGXm5BRk2MiaBD2C1rSde3WE9pzwsTfbaSDxdrEiNgGDKHsE5xWoDKZ58io admin=yes' --tags=register-user
+docker run \
+  -it \
+  --rm \
+  -w /work/matrix-docker-ansible-deploy \
+  --mount type=bind,src=`pwd`,dst=/work \
+  --mount type=bind,src=$HOME/.ssh/id_ed25519,dst=/root/.ssh/id_ed25519,ro \
+  ghcr.io/devture/ansible:11.6.0-r0-0 ansible-playbook -i inventory/hosts setup.yml --tags=install-all,ensure-matrix-users-created,start
