@@ -19,5 +19,5 @@ docker run \
   --rm \
   -w /work/matrix-docker-ansible-deploy \
   --mount type=bind,src=`pwd`,dst=/work \
-  --mount type=bind,src=$HOME/.ssh/id_ed25519,dst=/root/.ssh/id_ed25519,ro \
+  --mount type=bind,src=$HOME/.ssh/id_rsa,dst=/root/.ssh/id_rsa,ro \
   ghcr.io/devture/ansible:11.6.0-r0-0 ansible-playbook -i inventory/hosts setup.yml --tags=install-all,ensure-matrix-users-created,start
