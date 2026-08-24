@@ -19,7 +19,7 @@ docker run \
   --rm \
   -w /work/matrix-docker-ansible-deploy \
   --mount type=bind,src=`pwd`,dst=/work \
-  --mount type=bind,src=$HOME/.ssh/id_rsa,dst=/root/.ssh/id_rsa,ro \
+  --mount type=bind,src=$HOME/.ssh,dst=/root/.ssh,ro \
   ghcr.io/devture/ansible:11.6.0-r0-0 ansible-playbook -i inventory/hosts setup.yml \
     --extra-vars="username=$1 password=${RANDOM_PASSWORD} admin=no" \
     --tags=register-user
